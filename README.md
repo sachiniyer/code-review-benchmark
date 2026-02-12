@@ -1,14 +1,13 @@
 # PR Review Dataset Builder
 
-Extracts PRs where a GitHub user participated in code review, collects all events into a unified timeline, and enriches with GitHub API data. Outputs JSONL (one JSON object per PR).
-
-Every step saves both the query/request and the result for full auditability.
+Discovers PRs reviewed by a chatbot (via BigQuery), enriches them with GitHub API data, assembles a unified timeline, and runs LLM analysis. Everything is stored in a database (SQLite or PostgreSQL).
 
 ## Setup
 
 ```bash
 cd pr-review-dataset
 uv sync
+cp .env.example .env  # fill in values
 ```
 
 You need:
@@ -16,131 +15,126 @@ You need:
 - A GitHub personal access token with `public_repo` read access
 - `gcloud auth application-default login` (for BigQuery auth)
 
+## Environment
+
+Key variables in `.env`:
+
+| Variable | Description | Default |
+|---|---|---|
+| `DATABASE_URL` | SQLite or PostgreSQL URL | `sqlite:///pr_review.db` |
+| `GITHUB_TOKEN` | GitHub personal access token | |
+| `GCP_PROJECT` | GCP project for BigQuery billing | |
+| `MAX_PR_COMMITS` | Skip PRs with more commits | `50` |
+| `MAX_PR_CHANGED_LINES` | Skip PRs with more added+deleted lines | `2000` |
+
+## Using PostgreSQL (Cloud SQL)
+
+SQLite works out of the box. For production, use Cloud SQL for PostgreSQL.
+
+### 1. Create a Cloud SQL instance
+
+Create a PostgreSQL instance in GCP with public IP enabled.
+
+### 2. Install and run the Cloud SQL Auth Proxy
+
+The proxy tunnels through your GCP credentials — no IP whitelisting needed.
+
+```bash
+# macOS
+brew install cloud-sql-proxy
+
+# Linux
+curl -o cloud-sql-proxy https://storage.googleapis.com/cloud-sql-connectors/cloud-sql-proxy/v2.15.2/cloud-sql-proxy.linux.amd64
+chmod +x cloud-sql-proxy
+
+# Run in a separate terminal (keep it running)
+cloud-sql-proxy PROJECT:REGION:INSTANCE --port 5433
+# e.g. cloud-sql-proxy feisty-gasket-486610-h2:us-central1:crb-main --port 5433
+```
+
+### 3. Update `.env`
+
+```
+DATABASE_URL=postgresql://USER:PASSWORD@127.0.0.1:5433/postgres
+```
+
+### 4. Test the connection
+
+```bash
+psql "host=127.0.0.1 port=5433 dbname=postgres user=USER password=PASSWORD"
+```
+
+Both `asyncpg` (pipeline) and `psycopg` (dashboard) connect through the proxy transparently.
+
 ## Commands
 
-### Dry run (estimate BigQuery cost)
+### Discover PRs from BigQuery
 
 ```bash
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --start 2024-01-01 \
-  --end 2025-01-01 \
-  --phase bq-extract \
-  --bq-dry-run
+# Single chatbot
+uv run python main.py discover \
+  --chatbot "coderabbitai[bot]" \
+  --start-date 2024-01-01 \
+  --end-date 2025-01-01
+
+# All chatbots in one BQ scan (uses DB chatbots, or built-in defaults)
+uv run python main.py discover --all --days-back 7
 ```
 
-### Full pipeline
+### Enrich PRs via GitHub API
 
 ```bash
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --github-token "ghp_..." \
-  --start 2024-01-01 \
-  --end 2025-01-01
+uv run python main.py enrich \
+  --chatbot "coderabbitai[bot]" \
+  --one-shot --max-prs 50
 ```
 
-### Run phases individually
+PRs that exceed size limits are automatically marked as `skipped`. Override the defaults per-run:
 
 ```bash
-# Phase 1: BigQuery extraction
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --start 2024-01-01 \
-  --end 2025-01-01 \
-  --phase bq-extract
-
-# Phase 2: GitHub API enrichment
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --github-token "ghp_..." \
-  --start 2024-01-01 \
-  --end 2025-01-01 \
-  --phase gh-enrich
-
-# Phase 3: Assemble into final JSONL
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --start 2024-01-01 \
-  --end 2025-01-01 \
-  --phase assemble
+uv run python main.py enrich \
+  --chatbot "coderabbitai[bot]" \
+  --max-pr-commits 100 \
+  --max-pr-changed-lines 5000 \
+  --one-shot
 ```
 
-### Test with a small sample
+### Run as a daemon (enrich job)
 
 ```bash
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --github-token "ghp_..." \
-  --start 2024-01-01 \
-  --end 2025-01-01 \
-  --max-prs 3
+uv run python -m jobs.enrich_job \
+  --chatbot "coderabbitai[bot]" \
+  --max-pr-commits 50 \
+  --max-pr-changed-lines 2000
 ```
 
-### Custom output directory
+### Analyze with LLM
 
 ```bash
-uv run python main.py \
-  --user "target-username" \
-  --gcp-project "my-gcp-project" \
-  --github-token "ghp_..." \
-  --start 2024-01-01 \
-  --end 2025-01-01 \
-  --output-dir my-output/
+uv run python main.py analyze --chatbot "coderabbitai[bot]"
+uv run python main.py analyze --all
 ```
 
-## Output Structure
+### Import legacy filesystem data
 
-All data is organized under `output/{user_id}/` with per-PR directories at `{owner}/{repo}/{pr_number}/`. Every step saves both the query/request and the response for auditability.
+```bash
+uv run python main.py import --output-dir output
+```
+
+### Dashboard
+
+```bash
+uv run python main.py dashboard
+```
+
+## PR Status Flow
 
 ```
-output/{user_id}/
-├── 01_find_prs.sql                              # BQ query with parameter values
-├── 01_find_prs.json                             # List of discovered PRs
-├── {owner}/{repo}/{pr_number}/
-│   ├── 02_fetch_events.sql                      # BQ query with parameter values
-│   ├── 02_fetch_events.json                     # BigQuery archive events for this PR
-│   ├── 03_commits_request.json                  # REST API request (URL, params)
-│   ├── 03_commits_response.json                 # PR commits
-│   ├── 04_reviews_request.json                  # REST API request (URL, params)
-│   ├── 04_reviews_response.json                 # PR reviews
-│   ├── 05_review_threads_request.json           # GraphQL query + variables
-│   ├── 05_review_threads_response.json          # Review threads with reactions
-│   ├── 06_commit_details_request.json           # REST API requests (one per commit)
-│   ├── 06_commit_details_response.json          # File changes with patches
-│   └── assembled.json                           # Final combined result for this PR
+pending → enriching → enriched → assembled → analyzed
+                ↘ skipped (too large)
+                ↘ error
 ```
 
 ## Resumability
 
-Every phase writes files per-PR. If interrupted, re-run the same command and it skips already-completed work.
-
-Inspect individual PRs:
-
-```bash
-cat output/target-username/facebook/react/12345/02_fetch_events.json | jq .
-cat output/target-username/facebook/react/12345/03_commits_response.json | jq .
-cat output/target-username/facebook/react/12345/05_review_threads_response.json | jq .
-cat output/target-username/facebook/react/12345/assembled.json | jq .
-```
-
-Audit what queries were actually run:
-
-```bash
-cat output/target-username/01_find_prs.sql
-cat output/target-username/facebook/react/12345/02_fetch_events.sql
-cat output/target-username/facebook/react/12345/03_commits_request.json | jq .
-```
-
-## Output
-
-Each PR's final result lives at `output/{user_id}/{owner}/{repo}/{pr}/assembled.json` with:
-- PR metadata (title, author, merged status)
-- Unified timeline of all events (opens, reviews, comments, commits with full diffs)
-- Review thread resolution status and reactions
-- Summary stats
+Enrichment is resumable per-PR. Each PR tracks its `enrichment_step` — if interrupted, re-run the same command and it picks up where it left off.

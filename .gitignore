@@ -10,3 +10,7 @@ wheels/
 .venv
 output
 *.DS_Store
+
+# Environment and database
+.env
+*.db
