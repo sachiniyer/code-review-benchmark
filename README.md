@@ -6,19 +6,19 @@
     </p>
   <picture>
     <source
-      srcset="./images/light.png"
+      srcset="./images/dark.png"
       media="(prefers-color-scheme: dark)"
       width="125" height="125"
     />
     <img
-      src="./images/dark.png"
+      src="./images/light.png"
       alt="Code Review Benchmark Logo"
       width="125" height="125"
     />
   </picture>
 </div>
 
-Open-source benchmark for evaluating AI code review tools — the datasets, the judge, and the pipeline code. Reproduce our results or evaluate your own tool
+Open-source benchmark for evaluating AI code review tools — the datasets, the judge, and the pipeline code. Reproduce our results or evaluate your own tool.
 
 ## The problem
 
