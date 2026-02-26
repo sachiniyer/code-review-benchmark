@@ -18,7 +18,7 @@
   </picture>
 </div>
 
-Open-source benchmark for evaluating AI code review tools — the datasets, the judge, and the pipeline code. Reproduce our results or evaluate your own tool.
+Open-source [benchmark](https://codereview.withmartian.com) for evaluating AI code review tools — the datasets, the judge, and the pipeline code. Reproduce our results or evaluate your own tool.
 
 ## The problem
 
