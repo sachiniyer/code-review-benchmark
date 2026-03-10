@@ -85,6 +85,7 @@ DEFAULT_CHATBOT_USERNAMES = [
     "cubic-dev-ai[bot]",
     "mesa-dot-dev[bot]",
     "sourcery-ai[bot]",
+    "codeant-ai[bot]",
 ]
 
 
