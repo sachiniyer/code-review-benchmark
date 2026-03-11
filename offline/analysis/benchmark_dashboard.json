@@ -139,6 +139,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 7,
+              "fn": 3
             }
           }
         },
@@ -278,6 +283,11 @@
             "codeant": {
               "tp": 2,
               "fp": 1,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 7,
               "fn": 2
             }
           }
@@ -419,6 +429,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 7,
+              "fn": 0
             }
           }
         },
@@ -558,6 +573,11 @@
             "codeant": {
               "tp": 0,
               "fp": 2,
+              "fn": 1
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 6,
               "fn": 1
             }
           }
@@ -699,6 +719,11 @@
               "tp": 0,
               "fp": 2,
               "fn": 3
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 9,
+              "fn": 3
             }
           }
         },
@@ -839,6 +864,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 13,
+              "fn": 0
             }
           }
         },
@@ -979,6 +1009,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 7,
+              "fn": 2
             }
           }
         },
@@ -1119,6 +1154,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 4,
+              "fn": 1
             }
           }
         },
@@ -1259,6 +1299,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 6,
+              "fn": 0
             }
           }
         },
@@ -1399,6 +1444,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 4
+            },
+            "kodus": {
+              "tp": 3,
+              "fp": 7,
+              "fn": 2
             }
           }
         },
@@ -1538,6 +1588,11 @@
             "codeant": {
               "tp": 1,
               "fp": 1,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 24,
               "fn": 2
             }
           }
@@ -1679,6 +1734,11 @@
               "tp": 3,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 6,
+              "fn": 2
             }
           }
         },
@@ -1818,6 +1878,11 @@
             "codeant": {
               "tp": 1,
               "fp": 2,
+              "fn": 1
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 4,
               "fn": 1
             }
           }
@@ -1959,6 +2024,11 @@
               "tp": 0,
               "fp": 2,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 6,
+              "fn": 1
             }
           }
         },
@@ -2098,6 +2168,11 @@
             "codeant": {
               "tp": 1,
               "fp": 1,
+              "fn": 1
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 6,
               "fn": 1
             }
           }
@@ -2239,6 +2314,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 6,
+              "fn": 3
             }
           }
         },
@@ -2378,6 +2458,11 @@
             "codeant": {
               "tp": 1,
               "fp": 1,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 7,
               "fn": 2
             }
           }
@@ -2519,6 +2604,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 6,
+              "fn": 1
             }
           }
         },
@@ -2658,6 +2748,11 @@
             "codeant": {
               "tp": 1,
               "fp": 1,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 8,
               "fn": 2
             }
           }
@@ -2799,6 +2894,11 @@
               "tp": 0,
               "fp": 2,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 6,
+              "fn": 1
             }
           }
         },
@@ -2939,6 +3039,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 6,
+              "fn": 3
             }
           }
         },
@@ -3078,6 +3183,11 @@
             "codeant": {
               "tp": 0,
               "fp": 2,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 4,
               "fn": 2
             }
           }
@@ -3219,6 +3329,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 4,
+              "fn": 0
             }
           }
         },
@@ -3359,6 +3474,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 4,
+              "fn": 2
             }
           }
         },
@@ -3499,6 +3619,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 6,
+              "fn": 1
             }
           }
         },
@@ -3639,6 +3764,11 @@
               "tp": 3,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 8,
+              "fn": 1
             }
           }
         },
@@ -3779,6 +3909,11 @@
               "tp": 0,
               "fp": 4,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 8,
+              "fn": 1
             }
           }
         },
@@ -3919,6 +4054,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 7,
+              "fn": 1
             }
           }
         },
@@ -4059,6 +4199,11 @@
               "tp": 4,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 8,
+              "fn": 4
             }
           }
         },
@@ -4198,6 +4343,11 @@
             "codeant": {
               "tp": 0,
               "fp": 2,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 5,
               "fn": 2
             }
           }
@@ -4339,6 +4489,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 8,
+              "fn": 2
             }
           }
         },
@@ -4479,6 +4634,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 3,
+              "fp": 29,
+              "fn": 1
             }
           }
         },
@@ -4619,6 +4779,11 @@
               "tp": 0,
               "fp": 2,
               "fn": 3
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 4,
+              "fn": 2
             }
           }
         },
@@ -4759,6 +4924,11 @@
               "tp": 0,
               "fp": 2,
               "fn": 3
+            },
+            "kodus": {
+              "tp": 3,
+              "fp": 11,
+              "fn": 0
             }
           }
         },
@@ -4893,6 +5063,11 @@
             "codeant": {
               "tp": 2,
               "fp": 1,
+              "fn": 0
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 10,
               "fn": 0
             }
           }
@@ -5034,6 +5209,11 @@
               "tp": 0,
               "fp": 2,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 4,
+              "fn": 2
             }
           }
         },
@@ -5174,6 +5354,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 5,
+              "fn": 1
             }
           }
         },
@@ -5313,6 +5498,11 @@
             "codeant": {
               "tp": 3,
               "fp": 1,
+              "fn": 3
+            },
+            "kodus": {
+              "tp": 3,
+              "fp": 20,
               "fn": 3
             }
           }
@@ -5454,6 +5644,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 8,
+              "fn": 1
             }
           }
         },
@@ -5594,6 +5789,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 9,
+              "fn": 1
             }
           }
         },
@@ -5733,6 +5933,11 @@
             "codeant": {
               "tp": 2,
               "fp": 1,
+              "fn": 0
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 7,
               "fn": 0
             }
           }
@@ -5874,6 +6079,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 7,
+              "fn": 0
             }
           }
         },
@@ -6014,6 +6224,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 0
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 5,
+              "fn": 1
             }
           }
         },
@@ -6153,6 +6368,11 @@
             "codeant": {
               "tp": 0,
               "fp": 2,
+              "fn": 2
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 5,
               "fn": 2
             }
           }
@@ -6294,6 +6514,11 @@
               "tp": 4,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 4,
+              "fp": 8,
+              "fn": 1
             }
           }
         },
@@ -6434,6 +6659,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 8,
+              "fn": 0
             }
           }
         },
@@ -6573,6 +6803,11 @@
             "codeant": {
               "tp": 2,
               "fp": 1,
+              "fn": 3
+            },
+            "kodus": {
+              "tp": 2,
+              "fp": 11,
               "fn": 3
             }
           }
@@ -6714,6 +6949,11 @@
               "tp": 2,
               "fp": 1,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 0,
+              "fp": 12,
+              "fn": 4
             }
           }
         },
@@ -6854,6 +7094,11 @@
               "tp": 3,
               "fp": 1,
               "fn": 2
+            },
+            "kodus": {
+              "tp": 4,
+              "fp": 9,
+              "fn": 1
             }
           }
         },
@@ -6994,6 +7239,11 @@
               "tp": 1,
               "fp": 1,
               "fn": 1
+            },
+            "kodus": {
+              "tp": 1,
+              "fp": 7,
+              "fn": 1
             }
           }
         }
@@ -7014,6 +7264,7 @@
         "greptile",
         "greptile-v4",
         "kg",
+        "kodus",
         "mesa",
         "mra-a",
         "mra-b",
@@ -7092,42 +7343,6 @@
         ]
       },
       "overall_metrics": {
-        "mra-nano": {
-          "precision": 56.4,
-          "recall": 16.1,
-          "f1": 25.0,
-          "tp": 22,
-          "fp": 17,
-          "fn": 115,
-          "num_prs": 50
-        },
-        "bugbot": {
-          "precision": 46.2,
-          "recall": 43.8,
-          "f1": 44.9,
-          "tp": 60,
-          "fp": 70,
-          "fn": 77,
-          "num_prs": 50
-        },
-        "qodo-v2": {
-          "precision": 42.6,
-          "recall": 54.7,
-          "f1": 47.9,
-          "tp": 75,
-          "fp": 101,
-          "fn": 62,
-          "num_prs": 50
-        },
-        "baz": {
-          "precision": 44.0,
-          "recall": 29.2,
-          "f1": 35.1,
-          "tp": 40,
-          "fp": 51,
-          "fn": 97,
-          "num_prs": 50
-        },
         "graphite": {
           "precision": 75.0,
           "recall": 8.8,
@@ -7137,76 +7352,13 @@
           "fn": 125,
           "num_prs": 50
         },
-        "cubic-dev": {
-          "precision": 20.5,
-          "recall": 76.6,
-          "f1": 32.4,
-          "tp": 105,
-          "fp": 406,
-          "fn": 32,
-          "num_prs": 50
-        },
-        "propel": {
-          "precision": 46.0,
-          "recall": 38.0,
-          "f1": 41.6,
-          "tp": 52,
-          "fp": 61,
-          "fn": 85,
-          "num_prs": 50
-        },
-        "mesa": {
-          "precision": 21.0,
-          "recall": 48.2,
-          "f1": 29.2,
-          "tp": 66,
-          "fp": 249,
-          "fn": 71,
-          "num_prs": 50
-        },
-        "greptile": {
-          "precision": 38.4,
-          "recall": 38.7,
-          "f1": 38.5,
-          "tp": 53,
-          "fp": 85,
-          "fn": 84,
-          "num_prs": 50
-        },
-        "mra-max": {
-          "precision": 67.2,
-          "recall": 31.4,
-          "f1": 42.8,
-          "tp": 43,
-          "fp": 21,
-          "fn": 94,
-          "num_prs": 50
-        },
-        "sourcery": {
-          "precision": 26.2,
-          "recall": 54.7,
-          "f1": 35.5,
-          "tp": 75,
-          "fp": 211,
-          "fn": 62,
-          "num_prs": 50
-        },
-        "codeant": {
-          "precision": 52.2,
-          "recall": 51.1,
-          "f1": 51.7,
-          "tp": 70,
-          "fp": 64,
-          "fn": 67,
-          "num_prs": 50
-        },
-        "copilot": {
-          "precision": 26.6,
-          "recall": 53.3,
-          "f1": 35.5,
-          "tp": 73,
-          "fp": 201,
-          "fn": 64,
+        "coderabbit": {
+          "precision": 23.9,
+          "recall": 39.4,
+          "f1": 29.8,
+          "tp": 54,
+          "fp": 172,
+          "fn": 83,
           "num_prs": 50
         },
         "kg": {
@@ -7218,6 +7370,15 @@
           "fn": 114,
           "num_prs": 50
         },
+        "propel": {
+          "precision": 46.0,
+          "recall": 38.0,
+          "f1": 41.6,
+          "tp": 52,
+          "fp": 61,
+          "fn": 85,
+          "num_prs": 50
+        },
         "devin": {
           "precision": 50.5,
           "recall": 37.2,
@@ -7225,24 +7386,6 @@
           "tp": 51,
           "fp": 50,
           "fn": 86,
-          "num_prs": 50
-        },
-        "claude": {
-          "precision": 33.1,
-          "recall": 35.8,
-          "f1": 34.4,
-          "tp": 49,
-          "fp": 99,
-          "fn": 88,
-          "num_prs": 50
-        },
-        "coderabbit": {
-          "precision": 23.9,
-          "recall": 39.4,
-          "f1": 29.8,
-          "tp": 54,
-          "fp": 172,
-          "fn": 83,
           "num_prs": 50
         },
         "gemini": {
@@ -7263,13 +7406,49 @@
           "fn": 80,
           "num_prs": 49
         },
-        "entelligence": {
-          "precision": 19.9,
-          "recall": 25.5,
-          "f1": 22.4,
-          "tp": 35,
-          "fp": 141,
-          "fn": 102,
+        "mra-b": {
+          "precision": 76.1,
+          "recall": 37.2,
+          "f1": 50.0,
+          "tp": 51,
+          "fp": 16,
+          "fn": 86,
+          "num_prs": 50
+        },
+        "sourcery": {
+          "precision": 26.2,
+          "recall": 54.7,
+          "f1": 35.5,
+          "tp": 75,
+          "fp": 211,
+          "fn": 62,
+          "num_prs": 50
+        },
+        "greptile-v4": {
+          "precision": 31.6,
+          "recall": 56.9,
+          "f1": 40.6,
+          "tp": 78,
+          "fp": 169,
+          "fn": 59,
+          "num_prs": 50
+        },
+        "copilot": {
+          "precision": 26.6,
+          "recall": 53.3,
+          "f1": 35.5,
+          "tp": 73,
+          "fp": 201,
+          "fn": 64,
+          "num_prs": 50
+        },
+        "qodo-v2": {
+          "precision": 42.6,
+          "recall": 54.7,
+          "f1": 47.9,
+          "tp": 75,
+          "fp": 101,
+          "fn": 62,
           "num_prs": 50
         },
         "mra-ultra": {
@@ -7281,6 +7460,24 @@
           "fn": 87,
           "num_prs": 50
         },
+        "greptile": {
+          "precision": 38.4,
+          "recall": 38.7,
+          "f1": 38.5,
+          "tp": 53,
+          "fp": 85,
+          "fn": 84,
+          "num_prs": 50
+        },
+        "kodus": {
+          "precision": 13.8,
+          "recall": 46.7,
+          "f1": 21.3,
+          "tp": 64,
+          "fp": 399,
+          "fn": 73,
+          "num_prs": 50
+        },
         "augment": {
           "precision": 47.0,
           "recall": 62.8,
@@ -7290,22 +7487,85 @@
           "fn": 51,
           "num_prs": 50
         },
-        "mra-b": {
-          "precision": 76.1,
-          "recall": 37.2,
-          "f1": 50.0,
-          "tp": 51,
-          "fp": 16,
-          "fn": 86,
+        "entelligence": {
+          "precision": 19.9,
+          "recall": 25.5,
+          "f1": 22.4,
+          "tp": 35,
+          "fp": 141,
+          "fn": 102,
           "num_prs": 50
         },
-        "greptile-v4": {
-          "precision": 31.6,
-          "recall": 56.9,
-          "f1": 40.6,
-          "tp": 78,
-          "fp": 169,
-          "fn": 59,
+        "mra-nano": {
+          "precision": 56.4,
+          "recall": 16.1,
+          "f1": 25.0,
+          "tp": 22,
+          "fp": 17,
+          "fn": 115,
+          "num_prs": 50
+        },
+        "claude": {
+          "precision": 33.1,
+          "recall": 35.8,
+          "f1": 34.4,
+          "tp": 49,
+          "fp": 99,
+          "fn": 88,
+          "num_prs": 50
+        },
+        "cubic-dev": {
+          "precision": 20.5,
+          "recall": 76.6,
+          "f1": 32.4,
+          "tp": 105,
+          "fp": 406,
+          "fn": 32,
+          "num_prs": 50
+        },
+        "bugbot": {
+          "precision": 46.2,
+          "recall": 43.8,
+          "f1": 44.9,
+          "tp": 60,
+          "fp": 70,
+          "fn": 77,
+          "num_prs": 50
+        },
+        "codeant": {
+          "precision": 52.2,
+          "recall": 51.1,
+          "f1": 51.7,
+          "tp": 70,
+          "fp": 64,
+          "fn": 67,
+          "num_prs": 50
+        },
+        "mra-max": {
+          "precision": 67.2,
+          "recall": 31.4,
+          "f1": 42.8,
+          "tp": 43,
+          "fp": 21,
+          "fn": 94,
+          "num_prs": 50
+        },
+        "mesa": {
+          "precision": 21.0,
+          "recall": 48.2,
+          "f1": 29.2,
+          "tp": 66,
+          "fp": 249,
+          "fn": 71,
+          "num_prs": 50
+        },
+        "baz": {
+          "precision": 44.0,
+          "recall": 29.2,
+          "f1": 35.1,
+          "tp": 40,
+          "fp": 51,
+          "fn": 97,
           "num_prs": 50
         },
         "qodo": {
@@ -11655,31 +11915,13 @@
         ]
       },
       "overall_metrics": {
-        "claude": {
-          "precision": 33.1,
-          "recall": 40.1,
-          "f1": 36.3,
-          "tp": 55,
-          "fp": 111,
-          "fn": 82,
-          "num_prs": 50
-        },
-        "coderabbit": {
-          "precision": 23.3,
-          "recall": 39.4,
-          "f1": 29.3,
-          "tp": 54,
-          "fp": 178,
-          "fn": 83,
-          "num_prs": 50
-        },
-        "mra-nano": {
-          "precision": 9.2,
-          "recall": 22.6,
-          "f1": 13.1,
-          "tp": 31,
-          "fp": 305,
-          "fn": 106,
+        "propel": {
+          "precision": 42.4,
+          "recall": 36.5,
+          "f1": 39.2,
+          "tp": 50,
+          "fp": 68,
+          "fn": 87,
           "num_prs": 50
         },
         "bugbot": {
@@ -11691,31 +11933,13 @@
           "fn": 78,
           "num_prs": 50
         },
-        "gemini": {
-          "precision": 28.9,
-          "recall": 36.5,
-          "f1": 32.3,
-          "tp": 50,
-          "fp": 123,
-          "fn": 87,
-          "num_prs": 50
-        },
-        "copilot": {
-          "precision": 25.5,
-          "recall": 51.1,
-          "f1": 34.0,
-          "tp": 70,
-          "fp": 205,
-          "fn": 67,
-          "num_prs": 50
-        },
-        "kg": {
-          "precision": 44.9,
-          "recall": 16.1,
-          "f1": 23.7,
-          "tp": 22,
-          "fp": 27,
-          "fn": 115,
+        "greptile": {
+          "precision": 39.9,
+          "recall": 40.1,
+          "f1": 40.0,
+          "tp": 55,
+          "fp": 83,
+          "fn": 82,
           "num_prs": 50
         },
         "devin": {
@@ -11727,22 +11951,22 @@
           "fn": 84,
           "num_prs": 50
         },
-        "baz": {
-          "precision": 44.1,
-          "recall": 29.9,
-          "f1": 35.7,
-          "tp": 41,
-          "fp": 52,
-          "fn": 96,
+        "claude": {
+          "precision": 33.1,
+          "recall": 40.1,
+          "f1": 36.3,
+          "tp": 55,
+          "fp": 111,
+          "fn": 82,
           "num_prs": 50
         },
-        "greptile": {
-          "precision": 39.9,
-          "recall": 40.1,
-          "f1": 40.0,
-          "tp": 55,
-          "fp": 83,
-          "fn": 82,
+        "gemini": {
+          "precision": 28.9,
+          "recall": 36.5,
+          "f1": 32.3,
+          "tp": 50,
+          "fp": 123,
+          "fn": 87,
           "num_prs": 50
         },
         "augment": {
@@ -11754,6 +11978,15 @@
           "fn": 50,
           "num_prs": 50
         },
+        "mra-nano": {
+          "precision": 9.2,
+          "recall": 22.6,
+          "f1": 13.1,
+          "tp": 31,
+          "fp": 305,
+          "fn": 106,
+          "num_prs": 50
+        },
         "graphite": {
           "precision": 75.0,
           "recall": 8.8,
@@ -11763,6 +11996,42 @@
           "fn": 125,
           "num_prs": 50
         },
+        "copilot": {
+          "precision": 25.5,
+          "recall": 51.1,
+          "f1": 34.0,
+          "tp": 70,
+          "fp": 205,
+          "fn": 67,
+          "num_prs": 50
+        },
+        "coderabbit": {
+          "precision": 23.3,
+          "recall": 39.4,
+          "f1": 29.3,
+          "tp": 54,
+          "fp": 178,
+          "fn": 83,
+          "num_prs": 50
+        },
+        "baz": {
+          "precision": 44.1,
+          "recall": 29.9,
+          "f1": 35.7,
+          "tp": 41,
+          "fp": 52,
+          "fn": 96,
+          "num_prs": 50
+        },
+        "kg": {
+          "precision": 44.9,
+          "recall": 16.1,
+          "f1": 23.7,
+          "tp": 22,
+          "fp": 27,
+          "fn": 115,
+          "num_prs": 50
+        },
         "qodo": {
           "precision": 27.9,
           "recall": 46.0,
@@ -11770,15 +12039,6 @@
           "tp": 63,
           "fp": 163,
           "fn": 74,
-          "num_prs": 50
-        },
-        "propel": {
-          "precision": 42.4,
-          "recall": 36.5,
-          "f1": 39.2,
-          "tp": 50,
-          "fp": 68,
-          "fn": 87,
           "num_prs": 50
         }
       }
@@ -16872,31 +17132,13 @@
         ]
       },
       "overall_metrics": {
-        "claude": {
-          "precision": 30.5,
+        "propel": {
+          "precision": 38.9,
           "recall": 37.2,
-          "f1": 33.6,
+          "f1": 38.1,
           "tp": 51,
-          "fp": 116,
+          "fp": 80,
           "fn": 86,
-          "num_prs": 50
-        },
-        "coderabbit": {
-          "precision": 21.2,
-          "recall": 41.6,
-          "f1": 28.1,
-          "tp": 57,
-          "fp": 212,
-          "fn": 80,
-          "num_prs": 50
-        },
-        "mra-nano": {
-          "precision": 10.5,
-          "recall": 16.8,
-          "f1": 12.9,
-          "tp": 23,
-          "fp": 197,
-          "fn": 114,
           "num_prs": 50
         },
         "bugbot": {
@@ -16906,6 +17148,33 @@
           "tp": 59,
           "fp": 95,
           "fn": 78,
+          "num_prs": 50
+        },
+        "greptile": {
+          "precision": 33.8,
+          "recall": 36.5,
+          "f1": 35.1,
+          "tp": 50,
+          "fp": 98,
+          "fn": 87,
+          "num_prs": 50
+        },
+        "devin": {
+          "precision": 41.8,
+          "recall": 37.2,
+          "f1": 39.4,
+          "tp": 51,
+          "fp": 71,
+          "fn": 86,
+          "num_prs": 50
+        },
+        "claude": {
+          "precision": 30.5,
+          "recall": 37.2,
+          "f1": 33.6,
+          "tp": 51,
+          "fp": 116,
+          "fn": 86,
           "num_prs": 50
         },
         "gemini": {
@@ -16926,51 +17195,6 @@
           "fn": 61,
           "num_prs": 50
         },
-        "copilot": {
-          "precision": 23.5,
-          "recall": 53.3,
-          "f1": 32.6,
-          "tp": 73,
-          "fp": 238,
-          "fn": 64,
-          "num_prs": 50
-        },
-        "kg": {
-          "precision": 48.9,
-          "recall": 16.8,
-          "f1": 25.0,
-          "tp": 23,
-          "fp": 24,
-          "fn": 114,
-          "num_prs": 50
-        },
-        "devin": {
-          "precision": 41.8,
-          "recall": 37.2,
-          "f1": 39.4,
-          "tp": 51,
-          "fp": 71,
-          "fn": 86,
-          "num_prs": 50
-        },
-        "baz": {
-          "precision": 34.6,
-          "recall": 27.0,
-          "f1": 30.3,
-          "tp": 37,
-          "fp": 70,
-          "fn": 100,
-          "num_prs": 50
-        },
-        "greptile": {
-          "precision": 33.8,
-          "recall": 36.5,
-          "f1": 35.1,
-          "tp": 50,
-          "fp": 98,
-          "fn": 87,
-          "num_prs": 50
-        },
         "augment": {
           "precision": 37.3,
           "recall": 59.1,
@@ -16978,15 +17202,6 @@
           "tp": 81,
           "fp": 136,
           "fn": 56,
-          "num_prs": 50
-        },
-        "graphite": {
-          "precision": 66.7,
-          "recall": 8.8,
-          "f1": 15.5,
-          "tp": 12,
-          "fp": 6,
-          "fn": 125,
           "num_prs": 50
         },
         "greptile-v4": {
@@ -16998,15 +17213,6 @@
           "fn": 56,
           "num_prs": 50
         },
-        "qodo": {
-          "precision": 23.4,
-          "recall": 42.3,
-          "f1": 30.1,
-          "tp": 58,
-          "fp": 190,
-          "fn": 79,
-          "num_prs": 50
-        },
         "mra-max": {
           "precision": 7.8,
           "recall": 32.8,
@@ -17016,13 +17222,67 @@
           "fn": 92,
           "num_prs": 50
         },
-        "propel": {
-          "precision": 38.9,
-          "recall": 37.2,
-          "f1": 38.1,
-          "tp": 51,
-          "fp": 80,
-          "fn": 86,
+        "mra-nano": {
+          "precision": 10.5,
+          "recall": 16.8,
+          "f1": 12.9,
+          "tp": 23,
+          "fp": 197,
+          "fn": 114,
+          "num_prs": 50
+        },
+        "graphite": {
+          "precision": 66.7,
+          "recall": 8.8,
+          "f1": 15.5,
+          "tp": 12,
+          "fp": 6,
+          "fn": 125,
+          "num_prs": 50
+        },
+        "copilot": {
+          "precision": 23.5,
+          "recall": 53.3,
+          "f1": 32.6,
+          "tp": 73,
+          "fp": 238,
+          "fn": 64,
+          "num_prs": 50
+        },
+        "coderabbit": {
+          "precision": 21.2,
+          "recall": 41.6,
+          "f1": 28.1,
+          "tp": 57,
+          "fp": 212,
+          "fn": 80,
+          "num_prs": 50
+        },
+        "baz": {
+          "precision": 34.6,
+          "recall": 27.0,
+          "f1": 30.3,
+          "tp": 37,
+          "fp": 70,
+          "fn": 100,
+          "num_prs": 50
+        },
+        "kg": {
+          "precision": 48.9,
+          "recall": 16.8,
+          "f1": 25.0,
+          "tp": 23,
+          "fp": 24,
+          "fn": 114,
+          "num_prs": 50
+        },
+        "qodo": {
+          "precision": 23.4,
+          "recall": 42.3,
+          "f1": 30.1,
+          "tp": 58,
+          "fp": 190,
+          "fn": 79,
           "num_prs": 50
         }
       }
@@ -17044,20 +17304,6 @@
       "sort": "precision"
     },
     {
-      "id": "tool_kg_complexity_complex",
-      "label": "Best for Complex Code (Precision)",
-      "filters": {
-        "complexity": [
-          "complex"
-        ]
-      },
-      "description": "Deep logic and dependencies.",
-      "best_model": "anthropic_claude-opus-4-5-20251101",
-      "best_tool": "kg",
-      "best_score": 100.0,
-      "sort": "precision"
-    },
-    {
       "id": "tool_graphite_language_python",
       "label": "Best for Python (Precision)",
       "filters": {
@@ -17068,6 +17314,20 @@
       "description": "Python codebases with dynamic typing.",
       "best_model": "anthropic_claude-opus-4-5-20251101",
       "best_tool": "graphite",
+      "best_score": 100.0,
+      "sort": "precision"
+    },
+    {
+      "id": "tool_kg_complexity_complex",
+      "label": "Best for Complex Code (Precision)",
+      "filters": {
+        "complexity": [
+          "complex"
+        ]
+      },
+      "description": "Deep logic and dependencies.",
+      "best_model": "anthropic_claude-opus-4-5-20251101",
+      "best_tool": "kg",
       "best_score": 100.0,
       "sort": "precision"
     },
