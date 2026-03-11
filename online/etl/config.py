@@ -87,6 +87,10 @@ DEFAULT_CHATBOT_USERNAMES = [
     "sourcery-ai[bot]",
     "kody-ai[bot]",
     "codeant-ai[bot]",
+    "linearb[bot]",
+    "sentry[bot]",
+    "bito-code-review[bot]",
+    "macroscopeapp[bot]"
 ]
 
 
