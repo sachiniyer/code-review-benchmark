@@ -142,7 +142,7 @@ class DedupLLM:
         if not api_key:
             raise ValueError("MARTIAN_API_KEY environment variable required")
         self.client = AsyncOpenAI(api_key=api_key, base_url=base_url)
-        self.model = os.environ.get("MARTIAN_MODEL", "gpt-4o-mini")
+        self.model = os.environ.get("MARTIAN_MODEL", "openai/gpt-4o-mini")
         print(f"Dedup model: {self.model}")
         print(f"Base URL: {base_url}")
 
