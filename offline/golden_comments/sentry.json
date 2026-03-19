@@ -5,10 +5,6 @@
     "az_comment": "reviewed commit is not in the repo",
     "comments": [
       {
-        "comment": "Importing non-existent OptimizedCursorPaginator",
-        "severity": "Low"
-      },
-      {
         "comment": "Django querysets do not support negative slicing",
         "severity": "High"
       },

@@ -68,7 +68,7 @@ def sanitize_model_name(model: str) -> str:
 
 def get_model_dir() -> Path:
     """Get the model-specific results directory, creating it if needed."""
-    model = os.environ.get("MARTIAN_MODEL", "gpt-4o-mini")
+    model = os.environ.get("MARTIAN_MODEL", "openai/gpt-4o-mini")
     model_dir = RESULTS_DIR / sanitize_model_name(model)
     model_dir.mkdir(parents=True, exist_ok=True)
     return model_dir
@@ -85,7 +85,7 @@ class CandidateExtractor:
             raise ValueError("MARTIAN_API_KEY environment variable required")
 
         self.client = AsyncOpenAI(api_key=api_key, base_url=base_url)
-        self.model = os.environ.get("MARTIAN_MODEL", "gpt-4o-mini")
+        self.model = os.environ.get("MARTIAN_MODEL", "openai/gpt-4o-mini")
 
         print(f"Model: {self.model}")
         print(f"Base URL: {base_url}")

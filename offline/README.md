@@ -26,8 +26,9 @@ Each of the 50 benchmark PRs has a set of **golden comments**: real issues that 
 
 For each tool, the pipeline:
 1. **Extracts** individual issues from the tool's review comments (line-specific comments become candidates directly; general comments are sent to an LLM to extract distinct issues)
-2. **Judges** each candidate against each golden comment using an LLM: "Do these describe the same underlying issue?"
-3. **Computes** precision (what fraction of the tool's comments matched real issues?) and recall (what fraction of real issues did the tool find?)
+2. **Deduplicates** candidates — tools that post the same issue in both a summary comment and as inline comments would otherwise be penalised for the duplicate. An LLM groups candidates that express the same underlying concern; sibling duplicates are not counted as false positives in step 3.
+3. **Judges** each candidate against each golden comment using an LLM: "Do these describe the same underlying issue?"
+4. **Computes** precision (what fraction of the tool's comments matched real issues?) and recall (what fraction of real issues did the tool find?)
 
 The judge accepts semantic matches — different wording is fine as long as the underlying issue is the same.
 
@@ -127,22 +128,58 @@ Line-specific comments become direct candidates. General comments are sent to th
 
 **Output:** Updates `results/benchmark_data.json` with `candidates` field per review.
 
+### 2.5. Deduplicate candidates (recommended)
+
+Group duplicate candidates before judging. Tools that post the same issue in
+both a summary and inline comments would otherwise receive false positive
+penalties for the duplicate. This step is optional but recommended — without it,
+precision scores are artificially lowered for tools with overlapping comment
+formats.
+
+```bash
+# Deduplicate all tools
+uv run python -m code_review_benchmark.step2_5_dedup_candidates
+
+# Deduplicate a specific tool only
+uv run python -m code_review_benchmark.step2_5_dedup_candidates --tool qodo
+
+# Force re-run (default is incremental)
+uv run python -m code_review_benchmark.step2_5_dedup_candidates --force
+```
+
+**Output:** `results/{model}/dedup_groups.json`
+
+Each entry maps `(golden_url, tool)` to a list of groups, where each group is a
+list of candidate indices that express the same issue. Singletons (no duplicate)
+appear as single-element groups.
+
 ### 3. Judge comments
 
 Match candidates against golden comments, calculate precision/recall:
 
 ```bash
-# Evaluate all tools
-uv run python -m code_review_benchmark.step3_judge_comments
+# Evaluate all tools (with dedup applied)
+uv run python -m code_review_benchmark.step3_judge_comments \
+  --dedup-groups results/{model}/dedup_groups.json
 
 # Evaluate specific tool
 uv run python -m code_review_benchmark.step3_judge_comments --tool claude
 
 # Force re-evaluation
 uv run python -m code_review_benchmark.step3_judge_comments --tool claude --force
+
+# Run without dedup (baseline for comparison)
+uv run python -m code_review_benchmark.step3_judge_comments \
+  --evaluations-file results/{model}/evaluations_no_dedup.json
 ```
 
 **Output:** `results/{model}/evaluations.json` with TP/FP/FN, precision, recall per review.
+
+`--dedup-groups` — path to the dedup groups file from step 2.5. Duplicate
+candidates in the same group will not be counted as false positives.
+
+`--evaluations-file` — override the default output path, useful when running
+multiple comparison variants without overwriting the baseline.
 
 ### 4. Generate dashboard
 

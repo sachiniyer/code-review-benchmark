@@ -98,7 +98,7 @@ In both cases, the judge prompt asks "do these describe the same underlying issu
 ```
 ├── offline/                       # Offline benchmark (fixed dataset)
 │   ├── golden_comments/           #   Human-curated issues per repo (5 JSON files)
-│   ├── code_review_benchmark/     #   Pipeline: fork, download, extract, judge, export
+│   ├── code_review_benchmark/     #   Pipeline: fork, download, extract, dedup, judge, export
 │   ├── analysis/                  #   Interactive HTML dashboard
 │   ├── tests/                     #   Test suite (no network access required)
 │   └── results/                   #   Evaluation outputs (per judge model)
@@ -130,8 +130,12 @@ uv run python -m code_review_benchmark.step1_download_prs --output results/bench
 # Extract individual issues from reviews
 uv run python -m code_review_benchmark.step2_extract_comments
 
-# Run the LLM judge
-uv run python -m code_review_benchmark.step3_judge_comments
+# Deduplicate candidates (prevents false positives from inline+summary overlap)
+uv run python -m code_review_benchmark.step2_5_dedup_candidates
+
+# Run the LLM judge (pass dedup groups to avoid penalising duplicate candidates)
+uv run python -m code_review_benchmark.step3_judge_comments \
+  --dedup-groups results/$(MARTIAN_MODEL)/dedup_groups.json
 
 # View results
 open analysis/benchmark_dashboard.html
